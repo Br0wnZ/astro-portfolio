@@ -1,0 +1,81 @@
+{
+  "fullName": "Javier Moreno",
+  "metadata": {
+    "title": "Javier Moreno - Frontend Developer",
+    "description": "Angular and Flutter developer with experience in web and mobile development.",
+    "keywords": [
+      "Javier Moreno",
+      "Spain",
+      "Frontend Developer",
+      "Mobile Developer",
+      "TypeScript",
+      "JavaScript",
+      "Flutter",
+      "Angular",
+      "Dart"
+    ]
+  },
+  "typedText": ["Frontend Developer", "Mobile Developer", "Development Lover"],
+  "email": "javimoreno.tec@gmail.com",
+  "location": "Huelva, Spain",
+  "description": [
+    "Hola, soy Javier Moreno. Actualmente soy Front End & Mobile developer con experiencia desarrollando webs, aplicaciones webs y aplicaciones móviles.",
+    "Especializado en Javascript con experiencia profesional en Angular y Vue. También tengo experiencia trabajando con Ionic y Flutter.",
+    "Amante de la innovación y todo lo relacionado con la generación de nuevos conocimientos. Afronto los problemas con una sonrisa y lo resuelvo lo antes posible. Muy calculador sobre el tiempo y el trabajo que hago."
+  ],
+  "links": {
+    "twitter": "https://twitter.com",
+    "linkedin": "https://www.linkedin.com/in/javier-moreno-valle-813a18135/",
+    "github": "https://github.com/Br0wnZ",
+    "mail": "mailto:javimoreno.tec@gmail.com",
+    "blog": "https://blog.example.com"
+  },
+  "skills": [
+    "html",
+    "css",
+    "sass",
+    "bootstrap",
+    "tailwind",
+    "javascript",
+    "typescript",
+    "dart",
+    "flutter",
+    "node",
+    "git",
+    "astro"
+  ],
+  "projects": [
+    {
+      "imageSrc": "https://res.cloudinary.com/dfulu02wk/image/upload/v1715753952/qr_kjojid.webp",
+      "altText": "QR Code Scanner",
+      "description": "QR Code Scanner",
+      "codeSrc": "",
+      "liveDemoURL": "https://play.google.com/store/apps/details?id=com.bubulkapp.qrscanner&pcampaignid=web_share",
+      "technologies": ["flutter", "dart"]
+    },
+    {
+      "imageSrc": "https://res.cloudinary.com/dfulu02wk/image/upload/v1715753801/notapp_v5keqr.webp",
+      "altText": "Mobile notes app",
+      "description": "Mobile notes app",
+      "codeSrc": "",
+      "liveDemoURL": "https://play.google.com/store/apps/details?id=com.bubulkapp.notapp&pcampaignid=web_share",
+      "technologies": ["flutter", "dart"]
+    },
+    {
+      "imageSrc": "https://res.cloudinary.com/dfulu02wk/image/upload/v1715753800/electricity-price_xqiw0n.webp",
+      "altText": "Electricity price",
+      "description": "Electricity price",
+      "codeSrc": "https://github.com/Br0wnZ/flutter-electricity-price",
+      "liveDemoURL": "https://play.google.com/store/apps/details?id=com.bubulkapp.electricity_price",
+      "technologies": ["flutter", "dart"]
+    },
+    {
+      "imageSrc": "https://res.cloudinary.com/dfulu02wk/image/upload/v1715753800/1min2win_p4lbey.webp",
+      "altText": "1 minute 2 win",
+      "description": "1 minute 2 win",
+      "codeSrc": "",
+      "liveDemoURL": "https://play.google.com/store/apps/details?id=com.bubulkapp.one_min_to_win&pcampaignid=web_share",
+      "technologies": ["flutter", "dart"]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+---
+import GithubIcon from "@/assets/icons/github.astro"
+import LinkedinIcon from "@/assets/icons/linkedin.astro"
+import MailIcon from "@/assets/icons/mail.astro"
+import TwitterIcon from "@/assets/icons/twitter.astro"
+import { links, fullName } from "@/data.json"
+---
+
+<div id="hero">
+  <div class="mx-auto sm:px-4">
+    <div class="flex flex-wrap">
+      <div class="w-full lg:w-1/2 pr-4 pl-4 lg:mt-0 content-center">
+        <section
+          class="flex animate-fadeIn flex-col text-center text-lg-star gap-4"
+        >
+          <p class="text-lg">Hello! 👋 My name is</p>
+          <h1 class="font-paint text-6xl md:text-5xl leading-4 italic">
+            {fullName}
+          </h1>
+          <custom-typewriter></custom-typewriter>
+          <span id="typewriter" class="text-lg text-[#0564bd]"></span>
+          <div
+            class="social-links w-2/3 min-w-52 justify-between mx-auto lg:mx-0 self-center"
+          >
+            <div class="flex flex-wrap">
+              <div class="w-1/4 hover:scale-110">
+                <a
+                  class="no-underline"
+                  href="mailto:javimoreno.tec@gmail.com"
+                  target="_blank"
+                  aria-label="mail"
+                >
+                  <MailIcon />
+                </a>
+              </div>
+              <div class="w-1/4 hover:scale-110">
+                <a href={links.github} target="_blank" aria-label="github">
+                  <GithubIcon />
+                </a>
+              </div>
+              <div class="w-1/4 hover:scale-110">
+                <a href={links.linkedin} target="_blank" aria-label="linkedin">
+                  <LinkedinIcon />
+                </a>
+              </div>
+              <div class="w-1/4 hover:scale-110">
+                <a href={links.twitter} target="_blank" aria-label="twitter">
+                  <TwitterIcon />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="mx-auto mt-8">
+        <div class="relative w-80 overflow-hidden animate-fadeInRight h-full">
+          <div class="aspect-square"></div>
+          <div class="absolute rounded-full inset-0">
+            <picture>
+              <img
+                class="object-cover aspect-square rounded-full hover:animate-pulse"
+                src="./img/me.webp"
+                loading="lazy"
+                alt="Javier Moreno"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { typedText as words } from "@/data.json"
+
+  class CustomTypeWriter extends HTMLElement {
+    constructor() {
+      super()
+      let i = 0
+      let j = 0
+      let currentWord = ""
+      let isDeleting = false
+
+      const $typewriter = document.getElementById("typewriter") as HTMLElement
+      $typewriter.textContent = " "
+
+      function type() {
+        currentWord = words[i]
+        if (isDeleting) {
+          $typewriter.textContent = currentWord.substring(0, j - 1) + "|"
+          j--
+          if (j == 0) {
+            isDeleting = false
+            i++
+            if (i == words.length) {
+              i = 0
+            }
+          }
+        } else {
+          $typewriter.textContent = currentWord.substring(0, j + 1) + "|"
+          j++
+          if (j == currentWord.length) {
+            isDeleting = true
+          }
+        }
+        setTimeout(type, 100)
+      }
+
+      type()
+    }
+  }
+  customElements.define("custom-typewriter", CustomTypeWriter)
+</script>
+
+<style lang="scss">
+  @tailwind utilities;
+  #hero {
+    section {
+      .social-links {
+        a {
+          @apply no-underline;
+
+          svg {
+            &:hover {
+              @apply transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300;
+            }
+          }
+        }
+      }
+    }
+  }
+</style>

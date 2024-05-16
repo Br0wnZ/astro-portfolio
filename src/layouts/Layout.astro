@@ -1,51 +1,47 @@
 ---
+import Navbar from "@/components/navbar.astro"
+import { metadata } from "@/data.json"
+import "@/assets/sass/style.scss"
+import "@fontsource/finger-paint"
+import "@fontsource-variable/raleway"
 interface Props {
-	title: string;
+  title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html
+  lang="en"
+  class="bg-light-primary dark:bg-gradient-to-b from-gray-900 to-gray-800 text-black dark:text-white md:text-base xl:text-lg scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-400 select-none"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="caninical" href="http://localhost:4321/">
+    <meta name="generator" content={Astro.generator} />
+    <meta name="keywords" content={metadata.keywords.join(", ")} />
+    <meta name="description" content={metadata.description} />
+    <meta name="author" content="Javier Moreno" />
+    <meta property="og:title" content={metadata.title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="https://usa.bootcampcdn.com/wp-content/uploads/sites/106/2020/03/Web-Development-San-Francisco-1.jpeg" />
+    <meta property="og:description" content={metadata.description} />
+    <title>{title}</title>
+    <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
+  </head>
+  <Navbar />
+  <body
+    class="text-text-primary dark:bg-gradient-to-b from-gray-900 to-gray-800"
+  >
+    <div
+      id="root"
+      class="bg-[#DEE4E7] pt-32 mx-16 relative font-raleway max-w-full overflow-x-hidden dark:bg-gradient-to-b from-gray-900 to-gray-800"
+    >
+      <slot />
+    </div>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
