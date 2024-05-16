@@ -1,14 +1,14 @@
 ---
-import Github from "@/assets/icons/github.astro"
-import Linkedin from "@/assets/icons/linkedin.astro"
-import Twitter from "@/assets/icons/twitter.astro"
+import GithubIcon from "@/assets/icons/github.astro"
+import LinkedinIcon from "@/assets/icons/linkedin.astro"
+import TwitterIcon from "@/assets/icons/twitter.astro"
 import { links } from "@/data.json"
 ---
 
 <footer id="footer">
   <div class="max-w-[1320px] mx-auto px-10">
-    <div class="flex flex-wrap justify-between">
-      <div class="flex flex-wrap">
+    <div class="flex flex-wrap justify-center md:justify-between">
+      <div class="hidden md:flex md:flex-wrap">
         Made with ❤️, By&nbsp<a
           href="http://javimoreno.epizy.com/"
           target="_blank"
@@ -18,23 +18,23 @@ import { links } from "@/data.json"
           class="mt-1"
           href="https://github.com/zougari47/portfolio-template"
           target="_blank"
-          aria-label="github code source"><Github height="24" stroke="#0d6efd"/></i></a
-        >
+          aria-label="github code source"
+          ><GithubIcon height="24" stroke="#0d6efd" /></a>
       </div>
+    </div>
 
-      <div class="flex flex-wrap mb-2">
-        <a href={links.twitter} target="_blank" aria-label="twitter">
-          <Twitter height="24" stroke="#0d6efd" />
-        </a>
+    <div class="flex flex-wrap mb-2">
+      <a href={links.twitter} target="_blank" aria-label="twitter">
+        <TwitterIcon height="24" stroke="#0d6efd" />
+      </a>
 
-        <a href={links.github} target="_blank" aria-label="github">
-          <Github height="24" stroke="#0d6efd"/>
-        </a>
+      <a href={links.github} target="_blank" aria-label="github">
+        <GithubIcon height="24" stroke="#0d6efd" />
+      </a>
 
-        <a href={links.linkedin} target="_blank" aria-label="linkedin">
-          <Linkedin height="24" stroke="#0d6efd"/>
-        </a>
-      </div>
+      <a href={links.linkedin} target="_blank" aria-label="linkedin">
+        <LinkedinIcon height="24" stroke="#0d6efd" />
+      </a>
     </div>
   </div>
 </footer>

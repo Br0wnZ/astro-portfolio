@@ -3,7 +3,7 @@ import GithubIcon from "@/assets/icons/github.astro"
 import LinkedinIcon from "@/assets/icons/linkedin.astro"
 import MailIcon from "@/assets/icons/mail.astro"
 import TwitterIcon from "@/assets/icons/twitter.astro"
-import { links, fullName } from "@/data.json"
+import { links, fullName, image } from "@/data.json"
 ---
 
 <div id="hero">
@@ -11,10 +11,10 @@ import { links, fullName } from "@/data.json"
     <div class="flex flex-wrap">
       <div class="w-full lg:w-1/2 pr-4 pl-4 lg:mt-0 content-center">
         <section
-          class="flex animate-fadeIn flex-col text-center text-lg-star gap-4"
+          class="flex animate-fadeIn flex-col text-center gap-4"
         >
           <p class="text-lg">Hello! 👋 My name is</p>
-          <h1 class="font-paint text-6xl md:text-5xl leading-4 italic">
+          <h1 class="font-paint text-3xl lg:text-5xl md:text-6xl leading-4 italic">
             {fullName}
           </h1>
           <custom-typewriter></custom-typewriter>
@@ -53,13 +53,12 @@ import { links, fullName } from "@/data.json"
         </section>
       </div>
       <div class="mx-auto mt-8">
-        <div class="relative w-80 overflow-hidden animate-fadeInRight h-full">
-          <div class="aspect-square"></div>
-          <div class="absolute rounded-full inset-0">
+        <div class="relative w-60 md:w-80 overflow-hidden animate-fadeInRight h-full">
+          <div class="rounded-full">
             <picture>
               <img
                 class="object-cover aspect-square rounded-full hover:animate-pulse"
-                src="./img/me.webp"
+                src={image}
                 loading="lazy"
                 alt="Javier Moreno"
               />
