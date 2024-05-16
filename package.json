@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.6.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^7.6.0",
     "@emailjs/browser": "^4.3.3",
     "@fontsource-variable/raleway": "^5.0.18",
     "@fontsource/finger-paint": "^5.0.18",
