@@ -34,8 +34,8 @@ const { title } = Astro.props
     />
     <meta property="og:description" content={metadata.description} />
     <title>{title}</title>
-    <script async src="node_modules/flowbite/dist/flowbite.min.js"></script>
-    <script async src="src/assets/js/themes"></script>
+    <script type="module" is:inline src="node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script type="module" is:inline src="src/assets/js/themes"></script>
   </head>
   <Navbar />
   <body class="dark:bg-gradient-to-b from-gray-900 to-gray-800">
