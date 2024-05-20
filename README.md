@@ -1,54 +1,89 @@
-# Astro Starter Kit: Basics
+<h1 align="center">Portfolio Template For Developers</h1>
 
-```sh
-npm create astro@latest -- --template basics
+<br>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Astro-8B73FE?style=for-the-badge&logo=astro&logoColor=white"></img>
+<img src="https://img.shields.io/badge/javascript-F3DB1D?style=for-the-badge&logo=javascript&logoColor=black">
+</p>
+
+## Technology Used 🛠️
+
+- [Astro](https://astro.build/) - web framework
+- [SASS](https://sass-lang.com) - CSS Preprocessor
+- [Tailwind](https://tailwindcss.com/) - Tailwind CSS
+
+## Project Structure 📂
+
+```
+├── public
+│ │ ├── img
+│ │ ├── favicon.svg
+├── src
+│ ├── assets
+│ │ ├── icons
+│ │ ├── js
+│ ├── components
+│ ├── pages
+│ ├── layouts
+│ ├── utils
+│ └── data.json
+├── LICENSE
+├── .gitignore
+├── astro.config.mjs
+├── pnpm-lock.yaml
+├── package.json
+└── tsconfig.json
+├── README.md
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Getting Started with This Template
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+To start using this template, follow these steps:
 
-## 🚀 Project Structure
+1. **Fork Repository:**
 
-Inside of your Astro project, you'll see the following folders and files:
+2. **Edit Template:**
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+   - Modify the `data.json` file and include your images.
+
+3. **Set Up Contact Form:**
+
+   Ensure the contact form functionality:
+
+   - Create accounts on [Email.js](https://emailjs.com) and [IP Registry](https://ipregistry.co).
+   - Create a `.env` file in the project root with the following variables:
+     ```env
+     PUBLIC_EMAILJS_ID=your_emailjs_id
+     PUBLIC_CONTACT_SERVICE=your_contact_service
+     PUBLIC_TEMPLATE_ID=your_template_id
+     PUBLIC_IP_API_KEY=your_ip_api_key
+     ```
+   - Replace `your_emailjs_id`, `your_contact_service`, `your_template_id`, and `your_ip_api_key` with your actual values.
+
+4. **Install Dependencies & Run Project:**
+
+```
+pnpm install
+
+pnpm dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+5. **Deployment**
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+You can easily deploy with [Vercel](https://vercel.com) or [Netlify](https://netlify.com).
 
-Any static assets, like images, can be placed in the `public/` directory.
+🎉 By following these steps, you'll be able to customize, run, and deploy this template effectively.
 
-## 🧞 Commands
+## License 📄
 
-All commands are run from the root of the project, from a terminal:
+This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Sponsor 💛
 
-## 👀 Want to learn more?
+Give a ⭐ if you like this project!
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```
+
+```
