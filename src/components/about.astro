@@ -3,16 +3,10 @@ import { description, skills } from "@/data.json"
 ---
 
 <div id="about">
-  <div class="max-w-[1320px] mx-auto sm:px-4">
+  <div class="max-w-[1320px] mx-auto sm:px-4 hidden-section">
     <div class="flex flex-wrap">
       <div class="w-full md:w-full lg:w-1/2 pr-4 pl-4">
-        <section
-          id="about_section"
-          class=""
-          data-aos="fade-right"
-          data-aos-mirror="true"
-          data-aos-duration="1500"
-        >
+        <section id="about_section">
           <h2 class="mb-8 font-paint text-xl text-center">ABOUT ME</h2>
           {description.map((desc) => <p class="mb-8">{desc}</p>)}
         </section>
@@ -21,7 +15,7 @@ import { description, skills } from "@/data.json"
       <div class="flex flex-wrap w-full lg:w-1/2 pr-4 pl-4">
         <section
           id="skills_section"
-          class="flex flex-wrap w-full my-5 xl:mb-0"
+          class="flex flex-wrap w-full xl:mb-0"
           data-aos="fade-left"
           data-aos-duration="1000"
         >
@@ -38,7 +32,9 @@ import { description, skills } from "@/data.json"
                       alt={skill.toUpperCase()}
                     />
                   </picture>
-                  <span class="font-medium italic">{skill.toUpperCase()}</span>
+                  <span class="font-medium italic text-[.6rem] sm:text-base text-ellipsis">
+                    {skill.toUpperCase()}
+                  </span>
                 </div>
               ))
             }

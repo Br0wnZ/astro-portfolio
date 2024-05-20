@@ -5,10 +5,10 @@ import { links, projects } from "@/data.json"
 import { Image } from "astro:assets"
 ---
 
-<section id="portfolio">
+<section id="portfolio" class="hidden-section">
   <div class="mx-auto">
     <h2 class="mb-8 font-paint text-xl text-center">PROJECTS</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-4 sm:mx-16">
       {
         projects.map((project) => (
           <div>
@@ -22,7 +22,7 @@ import { Image } from "astro:assets"
                 loading="lazy"
               />
               <div class="details w-full content-center h-full text-white absolute top-0 left-0 z-10 transition-all duration-300 ease-in-out">
-                <div class="absolute top-44 w-[100%]">
+                <div class="absolute w-full bottom-28">
                   <p class="text-center px-4 text-xl">{project.description}</p>
                   <div class="links_project w-[20%] mx-auto text-2xl flex justify-center items-center">
                     {project.codeSrc && (
@@ -52,7 +52,7 @@ import { Image } from "astro:assets"
                     )}
                   </div>
                 </div>
-                <div class="technology min-w-[50%] absolute bottom-2 left-0 right-0 mx-auto backdrop-blur-md">
+                <div class="technology absolute bottom-3 w-full mx-auto backdrop-blur-sm">
                   <div class="flex flex-wrap justify-center gap-8">
                     {project.technologies.map((tech) => (
                       <div class="flex flex-col justify-center text-white">

@@ -9,51 +9,49 @@ import { links, fullName, image } from "@/data.json"
 <div id="hero">
   <div class="mx-auto sm:px-4">
     <div class="flex flex-wrap">
-      <div class="w-full lg:w-1/2 pr-4 pl-4 lg:mt-0 content-center">
-        <section
-          class="flex animate-fadeIn flex-col text-center gap-4"
-        >
+      <div class="w-full lg:w-1/2 lg:mt-0 content-center">
+        <section class="flex animate-fadeIn flex-col text-center gap-4">
           <p class="text-lg">Hello! 👋 My name is</p>
-          <h1 class="font-paint text-3xl lg:text-5xl md:text-6xl leading-4 italic">
+          <h1
+            class="font-paint text-2xl lg:text-5xl md:text-6xl sm:leading-4 italic"
+          >
             {fullName}
           </h1>
           <custom-typewriter></custom-typewriter>
           <span id="typewriter" class="text-lg text-[#0564bd]"></span>
-          <div
-            class="social-links w-2/3 min-w-52 justify-between mx-auto lg:mx-0 self-center"
-          >
-            <div class="flex flex-wrap">
-              <div class="w-1/4 hover:scale-110">
-                <a
-                  class="no-underline"
-                  href="mailto:javimoreno.tec@gmail.com"
-                  target="_blank"
-                  aria-label="mail"
-                >
-                  <MailIcon />
-                </a>
-              </div>
-              <div class="w-1/4 hover:scale-110">
-                <a href={links.github} target="_blank" aria-label="github">
-                  <GithubIcon />
-                </a>
-              </div>
-              <div class="w-1/4 hover:scale-110">
-                <a href={links.linkedin} target="_blank" aria-label="linkedin">
-                  <LinkedinIcon />
-                </a>
-              </div>
-              <div class="w-1/4 hover:scale-110">
-                <a href={links.twitter} target="_blank" aria-label="twitter">
-                  <TwitterIcon />
-                </a>
-              </div>
+          <div class="flex gap-2 md:gap-12 mx-auto lg:mx-0">
+            <div class="w-1/4 hover:scale-110">
+              <a
+                class="no-underline"
+                href="mailto:javimoreno.tec@gmail.com"
+                target="_blank"
+                aria-label="mail"
+              >
+                <MailIcon />
+              </a>
+            </div>
+            <div class="w-1/4 hover:scale-110">
+              <a href={links.github} target="_blank" aria-label="github">
+                <GithubIcon />
+              </a>
+            </div>
+            <div class="w-1/4 hover:scale-110">
+              <a href={links.linkedin} target="_blank" aria-label="linkedin">
+                <LinkedinIcon />
+              </a>
+            </div>
+            <div class="w-1/4 hover:scale-110">
+              <a href={links.twitter} target="_blank" aria-label="twitter">
+                <TwitterIcon />
+              </a>
             </div>
           </div>
         </section>
       </div>
       <div class="mx-auto mt-8">
-        <div class="relative w-60 md:w-80 overflow-hidden animate-fadeInRight h-full">
+        <div
+          class="relative w-40 md:w-80 overflow-hidden animate-fadeInRight h-full"
+        >
           <div class="rounded-full">
             <picture>
               <img

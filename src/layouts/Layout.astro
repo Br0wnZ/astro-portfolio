@@ -1,7 +1,6 @@
 ---
 import Navbar from "@/components/navbar.astro"
 import { metadata } from "@/data.json"
-import "@/assets/sass/style.scss"
 import "@fontsource/finger-paint"
 import "@fontsource-variable/raleway"
 interface Props {
@@ -20,28 +19,67 @@ const { title } = Astro.props
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <link rel="caninical" href="http://localhost:4321/">
+    <link rel="canonical" href="http://localhost:4321/" />
     <meta name="generator" content={Astro.generator} />
     <meta name="keywords" content={metadata.keywords.join(", ")} />
     <meta name="description" content={metadata.description} />
     <meta name="author" content="Javier Moreno" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content={metadata.title} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
-    <meta property="og:image" content="https://usa.bootcampcdn.com/wp-content/uploads/sites/106/2020/03/Web-Development-San-Francisco-1.jpeg" />
+    <meta
+      property="og:image"
+      content="https://usa.bootcampcdn.com/wp-content/uploads/sites/106/2020/03/Web-Development-San-Francisco-1.jpeg"
+    />
     <meta property="og:description" content={metadata.description} />
     <title>{title}</title>
     <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
   </head>
   <Navbar />
   <body
-    class="text-text-primary dark:bg-gradient-to-b from-gray-900 to-gray-800"
+    class="dark:bg-gradient-to-b from-gray-900 to-gray-800"
   >
     <div
       id="root"
-      class="bg-[#DEE4E7] pt-32 mx-16 relative font-raleway max-w-full overflow-x-hidden dark:bg-gradient-to-b from-gray-900 to-gray-800"
+      class="bg-[#DEE4E7] text-black dark:text-text-primary pt-32 mx-16 relative font-raleway max-w-full overflow-x-hidden dark:bg-gradient-to-b from-gray-900 to-gray-800"
     >
       <slot />
     </div>
   </body>
+
+  <style is:global>
+    .hidden-section {
+      transition: all 1s;
+      opacity: 0;
+      filter: blur(5px);
+      transform: translateY(200px);
+      overflow-x: hidden;
+    }
+
+    .show-section {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+      overflow-x: hidden;
+    }
+  </style>
+
+  <script>
+    const hidden_elements = document.querySelectorAll(".hidden-section")
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show-section")
+        } else {
+          entry.target.classList.remove("show-section")
+        }
+      })
+    })
+
+    hidden_elements.forEach((el) => {
+      observer.observe(el)
+    })
+  </script>
 </html>

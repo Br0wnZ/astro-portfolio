@@ -3,7 +3,7 @@ import { email, location } from "@/data.json"
 ---
 
 <div id="contact" class="mb-8">
-  <section>
+  <section class="hidden-section">
     <div class="max-w-[1320px] mx-auto sm:px-4">
       <h2 class="font-paint text-center text-xl">CONTACT ME</h2>
       <div class="flex flex-wrap mt-4">
@@ -122,11 +122,11 @@ import { email, location } from "@/data.json"
             </div>
             <div class="mt-8">
               <button
-                class="flex flex-wrap items-center text-center select-none border font-normal disabled:cursor-not-allowed rounded py-3 px-4 text-xl w-full text-white hover:cursor-pointer justify-center gap-8"
+                class="flex flex-wrap text-black dark:text-white items-center text-center select-none border dark:border-white border-black font-normal disabled:cursor-not-allowed rounded py-3 px-4 text-xl w-full hover:cursor-pointer justify-center gap-8"
                 id="send-button"
               >
                 <svg
-                  class="w-4 h-4 text-white me-2"
+                  class="w-4 h-4 text-black dark:text-white me-2"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
