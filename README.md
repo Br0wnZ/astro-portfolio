@@ -5,12 +5,12 @@
 <p align="center">
 <img src="https://img.shields.io/badge/Astro-8B73FE?style=for-the-badge&logo=astro&logoColor=white"></img>
 <img src="https://img.shields.io/badge/javascript-F3DB1D?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white">
 </p>
 
 ## Technology Used 🛠️
 
 - [Astro](https://astro.build/) - web framework
-- [SASS](https://sass-lang.com) - CSS Preprocessor
 - [Tailwind](https://tailwindcss.com/) - Tailwind CSS
 
 ## Project Structure 📂
@@ -36,7 +36,6 @@
 └── tsconfig.json
 ├── README.md
 ```
-
 
 ## Getting Started with This Template
 
@@ -83,7 +82,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE)
 ## Sponsor 💛
 
 Give a ⭐ if you like this project!
-
-```
-
-```
