@@ -101,3 +101,33 @@ export function toggleMenu() {
     </div>
   </div>
 </nav>
+
+<script>
+  const menu = document.getElementById("navbar-default")
+  const button = document.querySelector("[data-collapse-toggle=navbar-default]")
+  const listItem = document.querySelectorAll("#navbar-default li")
+
+  button?.addEventListener("click", () => {
+    menu?.classList.toggle("menu-open")
+    menu?.classList.toggle("hidden")
+  })
+
+  listItem.forEach((item) => {
+    item.addEventListener("click", () => {
+      menu?.classList.add("hidden")
+      menu?.classList.remove("menu-open")
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      })
+    })
+  })
+
+  // listItem.forEach((item) => {
+  //   item.addEventListener("click", () => {
+  //     menu?.classList.add("hidden")
+  //     menu?.classList.remove("menu-open")
+  //   })
+  // })
+</script>

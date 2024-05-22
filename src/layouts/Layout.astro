@@ -13,7 +13,7 @@ const { title } = Astro.props
 <!doctype html>
 <html
   lang="en"
-  class="bg-light-primary dark:bg-gradient-to-b from-gray-900 to-gray-800 text-black dark:text-white md:text-base xl:text-lg scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-400 select-none"
+  class="md:text-base xl:text-lg scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-400 select-none"
 >
   <head>
     <meta charset="UTF-8" />
@@ -34,14 +34,12 @@ const { title } = Astro.props
     />
     <meta property="og:description" content={metadata.description} />
     <title>{title}</title>
-    <script type="module" is:inline src="node_modules/flowbite/dist/flowbite.min.js"></script>
-    <script type="module" is:inline src="src/assets/js/themes"></script>
   </head>
   <Navbar />
   <body class="dark:bg-gradient-to-b from-gray-900 to-gray-800">
     <div
       id="root"
-      class="bg-[#DEE4E7] text-black dark:text-text-primary pt-32 mx-16 relative font-raleway max-w-full overflow-x-hidden dark:bg-gradient-to-b from-gray-900 to-gray-800"
+      class="bg-[#DEE4E7] text-black dark:text-text-primary pt-32 px-16 relative font-raleway max-w-full dark:bg-gradient-to-b from-gray-900 to-gray-800"
     >
       <slot />
     </div>
@@ -80,5 +78,18 @@ const { title } = Astro.props
     hidden_elements.forEach((el) => {
       observer.observe(el)
     })
+  </script>
+
+  <script>
+    const prefersDarkColorScheme = () =>
+      window &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+
+    if (prefersDarkColorScheme()) {
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+    }
   </script>
 </html>
