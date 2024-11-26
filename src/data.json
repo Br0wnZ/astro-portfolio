@@ -28,8 +28,10 @@
     "twitter": "https://twitter.com",
     "linkedin": "https://www.linkedin.com/in/javier-moreno-valle-813a18135/",
     "github": "https://github.com/Br0wnZ",
+    "repository": "https://github.com/Br0wnZ/astro-portfolio",
     "mail": "mailto:javimoreno.tec@gmail.com",
-    "blog": "https://www.enmilocalfunciona.io/author/javier-moreno-valle/"
+    "blog": "https://www.enmilocalfunciona.io/author/javier-moreno-valle/",
+    "resume": "https://javiermoreno.vercel.app/"
   },
   "skills": [
     "html",

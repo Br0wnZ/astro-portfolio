@@ -8,18 +8,19 @@ import { links } from "@/data.json"
 <footer id="footer">
   <div class="flex text-center md:justify-between w-full mx-auto px-10 my-2">
     <div class="flex flex-wrap justify-center md:justify-between">
-      <div class="hidden md:flex ">
+      <div class="hidden md:flex">
         Made with ❤️, by&nbsp<a
-          href="http://javimoreno.epizy.com/"
+          href={links.resume}
           target="_blank"
           class="text-blue-500">Javier Moreno</a
         >, Open sourced on&nbsp
         <a
           class="mt-1"
-          href="https://github.com/zougari47/portfolio-template"
+          href={links.repository}
           target="_blank"
           aria-label="github code source"
-          ><GithubIcon height="24" stroke="#0d6efd" /></a>
+          ><GithubIcon height="24" stroke="#0d6efd" /></a
+        >
       </div>
     </div>
 

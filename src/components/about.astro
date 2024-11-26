@@ -20,24 +20,59 @@ import { description, skills } from "@/data.json"
           data-aos-duration="1000"
         >
           <h2 class="font-paint italic text-center text-xl w-full">SKILLS</h2>
-          <div class="flex flex-wrap items-center">
-            {
-              skills.map((skill) => (
-                <div class="w-1/3 xs:w-1/2 md:w-1/3 p-2">
-                  <picture>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+            <div class="grid gap-4">
+              {
+                skills.slice(0, 3).map((skill) => {
+                  return (
                     <img
-                      class="pb-2 h-8 md:h-10 xl:h-12 hover:scale-110 transition duration-300 ease-in-out"
-                      loading="lazy"
+                      class="h-auto max-w-full rounded-lg"
                       src={`/img/stack-icons/${skill}.svg`}
                       alt={skill.toUpperCase()}
                     />
-                  </picture>
-                  <span class="font-medium italic text-[.6rem] sm:text-base text-ellipsis">
-                    {skill.toUpperCase()}
-                  </span>
-                </div>
-              ))
-            }
+                  )
+                })
+              }
+            </div>
+            <div class="grid gap-4">
+              {
+                skills.slice(3, 6).map((skill) => {
+                  return (
+                    <img
+                      class="h-auto max-w-full rounded-lg"
+                      src={`/img/stack-icons/${skill}.svg`}
+                      alt={skill.toUpperCase()}
+                    />
+                  )
+                })
+              }
+            </div>
+            <div class="grid gap-4">
+              {
+                skills.slice(6, 10).map((skill) => {
+                  return (
+                    <img
+                      class="h-auto max-w-full rounded-lg"
+                      src={`/img/stack-icons/${skill}.svg`}
+                      alt={skill.toUpperCase()}
+                    />
+                  )
+                })
+              }
+            </div>
+            <div class="grid gap-4">
+              {
+                skills.slice(10, 13).map((skill) => {
+                  return (
+                    <img
+                      class="h-auto max-w-full rounded-lg"
+                      src={`/img/stack-icons/${skill}.svg`}
+                      alt={skill.toUpperCase()}
+                    />
+                  )
+                })
+              }
+            </div>
           </div>
         </section>
       </div>
